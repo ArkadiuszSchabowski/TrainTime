@@ -20,6 +20,8 @@ jobs:
 
       - name: Restore dependencies
         run: dotnet restore TrainTime.csproj
+        working-directory: ./TrainTimeServer
 
       - name: Build
         run: dotnet build TrainTime.csproj --no-restore
+        working-directory: ./TrainTimeServer

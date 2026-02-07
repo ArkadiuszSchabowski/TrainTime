@@ -1,7 +1,12 @@
+using Microsoft.EntityFrameworkCore;
+using TrainTime_Database;
+
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 builder.Services.AddOpenApi();
+
+builder.Services.AddDbContext<MyDbContext>(o => o.UseSqlServer(builder.Configuration.GetConnectionString("MyDbConnectionString")));
 
 var app = builder.Build();
 

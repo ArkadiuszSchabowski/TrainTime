@@ -17,6 +17,9 @@ jobs:
         uses: actions/setup-dotnet@v4
         with:
           dotnet-version: 9.0.x
+          
+      - name: List files in TrainTimeServer
+        run: ls -R ./TrainTimeServer
 
       - name: Restore dependencies
         run: dotnet restore TrainTime.csproj

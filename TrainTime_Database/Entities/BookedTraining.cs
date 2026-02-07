@@ -9,6 +9,6 @@
         public Trainer? Trainer { get; set; }
         public int GymId { get; set; }
         public Gym? Gym { get; set; }
-        public DateTime Date { get; set; } = new();
+        public DateTime Date { get; set; }
     }
 }
